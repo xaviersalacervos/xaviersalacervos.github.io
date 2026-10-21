@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://xaviersalacervos-cmyk.github.io/sitemap.xml
+Sitemap: https://xaviersalacervos.github.io/sitemap.xml

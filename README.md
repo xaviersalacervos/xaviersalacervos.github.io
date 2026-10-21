@@ -1,6 +1,6 @@
 # Web professional · Francesc Xavier Sala Cervós
 
-Web d'una sola pàgina en HTML, CSS i JavaScript, sense dependències, publicada amb GitHub Pages a https://xaviersalacervos-cmyk.github.io/
+Web d'una sola pàgina en HTML, CSS i JavaScript, sense dependències, publicada amb GitHub Pages a https://xaviersalacervos.github.io/
 
 ## Estructura
 - `index.html`: tota la pàgina (en català)
