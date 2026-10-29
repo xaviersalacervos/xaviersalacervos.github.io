@@ -5,43 +5,43 @@
 
   var RESPOSTES = [
     {
-      q: 'Què pot aportar a una entitat social?',
-      k: ['aportar', 'aporta', 'entitat', 'social', 'ofereix', 'oferir', 'serveis', 'valor', 'perfil', 'ofrece', 'aporta', 'offer'],
-      a: "En Xavier aporta més de 25 anys d'experiència amb persones amb discapacitat intel·lectual, salut mental, infància i adolescència, i amb els equips que les acompanyen.\n\nOfereix tres línies de treball: formació (per a professionals en actiu i formació per a l'ocupació), supervisió d'equips i disseny de projectes a partir de les necessitats de l'entitat i del territori. Hi incorpora la intel·ligència artificial com a eina de treball, sempre amb criteri professional."
+      q: 'Què pots aportar a una entitat social?',
+      k: ['aportar', 'aporta', 'aportes', 'entitat', 'social', 'ofereixes', 'ofereix', 'oferir', 'serveis', 'valor', 'perfil', 'ofreces', 'ofrece', 'offer'],
+      a: "Hi aporto més de 25 anys d'experiència amb persones amb discapacitat intel·lectual, salut mental, infància i adolescència, i amb els equips que les acompanyen.\n\nOfereixo tres línies de treball: formació (per a professionals en actiu i formació per a l'ocupació), supervisió d'equips i disseny de projectes a partir de les necessitats de l'entitat i del territori. Hi incorporo la intel·ligència artificial com a eina de treball, sempre amb criteri professional."
     },
     {
-      q: 'Ha dirigit o coordinat equips? De quina mida?',
+      q: 'Has dirigit o coordinat equips? De quina mida?',
       k: ['equip', 'equips', 'dirigit', 'direccio', 'director', 'coordinat', 'coordinacio', 'mida', 'professionals', 'persones', 'ateses', 'supervisio', 'equipo', 'team'],
-      a: "Sí. Ha coordinat i dirigit equips en quatre serveis: residencial, primera infància (centre 0-3 anys), centre ocupacional i servei d'ajustament personal i social.\n\nAl darrer servei que va dirigir, el Centre Ocupacional Tramuntana (2008-2026), coordinava un equip de 23 professionals d'atenció directa en un servei amb 117 persones ateses. Al Servei d'Ajustament Personal i Social del Centre Especial de Treball va acompanyar 63 persones treballadores amb discapacitat."
+      a: "Sí. He coordinat i dirigit equips en quatre serveis: residencial, primera infància (centre 0-3 anys), centre ocupacional i servei d'ajustament personal i social.\n\nAl darrer servei que vaig dirigir, el Centre Ocupacional Tramuntana (2008-2026), coordinava un equip de 23 professionals d'atenció directa en un servei amb 117 persones ateses. Al Servei d'Ajustament Personal i Social del Centre Especial de Treball vaig acompanyar 63 persones treballadores amb discapacitat."
     },
     {
-      q: 'Quina experiència té en formació?',
+      q: 'Quina experiència tens en formació?',
       k: ['experiencia', 'formacio', 'formador', 'docencia', 'cursos', 'impartit', 'classes', 'formacion', 'training', 'teaching'],
-      a: "Entre 1998 i 2007 va ser formador per al Col·legi Oficial de Psicòlegs, el Col·legi d'Infermeria, l'Institut d'Assistència Sanitària, la Universitat de Girona, l'Ajuntament d'Arbúcies i la Fundació Plataforma Educativa: 8 temàtiques formatives a 6 institucions, com relaxació i gestió de l'estrès, psicopatologia, treball en equip, direcció d'equips i dinàmica de grups.\n\nAl Centre Ocupacional Tramuntana va ser responsable de dissenyar, planificar i avaluar el pla de formació i la formació de les noves incorporacions."
+      a: "Entre 1998 i 2007 vaig ser formador per al Col·legi Oficial de Psicòlegs, el Col·legi d'Infermeria, l'Institut d'Assistència Sanitària, la Universitat de Girona, l'Ajuntament d'Arbúcies i la Fundació Plataforma Educativa: 8 temàtiques formatives a 6 institucions, com relaxació i gestió de l'estrès, psicopatologia, treball en equip, direcció d'equips i dinàmica de grups.\n\nAl Centre Ocupacional Tramuntana vaig ser responsable de dissenyar, planificar i avaluar el pla de formació i la formació de les noves incorporacions."
     },
     {
-      q: "Té habilitació docent per a formació per a l'ocupació?",
+      q: "Tens habilitació docent per a formació per a l'ocupació?",
       k: ['habilitacio', 'docent', 'ocupacio', 'acreditacio', 'pedagogica', 'didactica', 'master', 'professorat', 'certificats', 'professionalitat', 'formar', 'habilitacion', 'docente'],
-      a: "Sí. Té l'Acreditació de la formació pedagògica i didàctica per a la docència, equivalent, a efectes d'habilitació docent, al requisit de formació pedagògica del Màster de Formació del Professorat.\n\nL'ha complementada el 2026 amb cinc cursos de formació professional a Forma't per formar, la plataforma de la Generalitat: dissenys tecnopedagògics, avaluació per competències professionals, formació i motivació, sectors d'activitat i nous perfils, i metodologies per a l'orientació professional."
+      a: "Sí. Tinc l'Acreditació de la formació pedagògica i didàctica per a la docència, equivalent, a efectes d'habilitació docent, al requisit de formació pedagògica del Màster de Formació del Professorat.\n\nL'he complementada el 2026 amb cinc cursos de formació professional a Forma't per formar, la plataforma de la Generalitat: dissenys tecnopedagògics, avaluació per competències professionals, formació i motivació, sectors d'activitat i nous perfils, i metodologies per a l'orientació professional."
     },
     {
-      q: 'Quina formació té en intel·ligència artificial?',
+      q: 'Quina formació tens en intel·ligència artificial?',
       k: ['ia', 'intelligencia', 'artificial', 'chatgpt', 'claude', 'digital', 'ai', 'inteligencia'],
-      a: "Des del 2025 ha fet sis cursos d'IA aplicada a la feina (40 hores): ChatGPT per a la innovació i l'eficiència (Diputació de Girona), iniciació a la IA i als fluxos de treball amb IA (BIG School), IA aplicada a la gestió d'entitats (Plena Inclusión), IA per a la societat civil (Plena Inclusión i Founderz) i IA per a professionals de la psicologia (COPC).\n\nAra fa el curs Introducció a la intel·ligència artificial de PIMEC (25 h)."
+      a: "Des del 2025 he fet sis cursos d'IA aplicada a la feina (40 hores): ChatGPT per a la innovació i l'eficiència (Diputació de Girona), iniciació a la IA i als fluxos de treball amb IA (BIG School), IA aplicada a la gestió d'entitats (Plena Inclusión), IA per a la societat civil (Plena Inclusión i Founderz) i IA per a professionals de la psicologia (COPC).\n\nAra faig el curs Introducció a la intel·ligència artificial de PIMEC (25 h)."
     },
     {
-      q: 'Quina formació acadèmica té?',
+      q: 'Quina formació acadèmica tens?',
       k: ['academica', 'titulacio', 'titol', 'estudis', 'llicenciatura', 'psicologia', 'postgrau', 'universitat', 'educador', 'psicoleg', 'titulacion', 'estudios', 'degree'],
-      a: "És llicenciat en Psicologia per la UAB (1992), amb el Postgrau en Integració Laboral (UdG, 200 h), el Postgrau en Patologia Dual (UdG, 190 h), el Màster en Mediació Terapèutica Corporal (Crei-Sants, UB) i el Postgrau en Psicoteràpia i Creixement Personal (Institut Erich Fromm).\n\nEstà habilitat com a psicòleg general sanitari i com a educador social."
+      a: "Sóc llicenciat en Psicologia per la UAB (1992), amb el Postgrau en Integració Laboral (UdG, 200 h), el Postgrau en Patologia Dual (UdG, 190 h), el Màster en Mediació Terapèutica Corporal (Crei-Sants, UB) i el Postgrau en Psicoteràpia i Creixement Personal (Institut Erich Fromm).\n\nEstic habilitat com a psicòleg general sanitari i com a educador social."
     },
     {
-      q: 'Com hi puc contactar?',
+      q: 'Com puc contactar amb tu?',
       k: ['contacte', 'contactar', 'correu', 'email', 'mail', 'telefon', 'trucar', 'parlar', 'contacto', 'contact'],
-      a: "Pots escriure-li a " + CORREU + ". També pots descarregar el CV complet en PDF des d'aquesta mateixa web."
+      a: "Pots escriure'm a " + CORREU + ". També pots descarregar el meu CV complet en PDF des d'aquesta mateixa web."
     }
   ];
 
-  var NO_TROBAT = "Aquesta pregunta no la tinc preparada. Pots triar una de les preguntes suggerides o escriure directament a en Xavier: " + CORREU + ".";
+  var NO_TROBAT = "Aquesta pregunta no la tinc preparada aquí. Pots triar una de les preguntes suggerides o escriure'm directament a " + CORREU + ".";
 
   function norm(t) {
     return (t || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/l·l/g, 'll').replace(/·/g, '').replace(/[^a-z0-9 ]/g, ' ');
