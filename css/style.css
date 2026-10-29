@@ -61,7 +61,8 @@ p { margin: 0 0 1em; max-width: 42rem; }
 /* ---------- Capçalera ---------- */
 .site-header { position: sticky; top: 0; z-index: 50; background: rgba(250, 248, 244, 0.96); border-bottom: 1px solid var(--line); }
 .site-header .container { display: flex; align-items: center; justify-content: space-between; min-height: 3.75rem; gap: 1rem; }
-.brand { font-family: var(--serif); font-weight: 600; color: var(--ink); text-decoration: none; font-size: 1.05rem; }
+.brand { display: inline-flex; align-items: center; gap: .6rem; font-family: var(--serif); font-weight: 600; color: var(--ink); text-decoration: none; font-size: 1.05rem; }
+.brand-mark { width: 1.875rem; height: 1.875rem; flex: none; }
 .brand:hover { color: var(--accent); }
 
 .nav-toggle { display: inline-flex; align-items: center; gap: 0.4rem; background: none; border: 1px solid var(--line); border-radius: var(--radius); padding: 0.45rem 0.75rem; font: inherit; font-size: 0.95rem; color: var(--ink); cursor: pointer; }
