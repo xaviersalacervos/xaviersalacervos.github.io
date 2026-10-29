@@ -247,3 +247,6 @@ details li { margin-bottom: 0.35rem; font-size: 0.98rem; }
 .xat-form input{flex:1;min-width:0;font:inherit;font-size:.95rem;padding:.55rem .7rem;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--text)}
 .xat-form button{font:inherit;font-weight:600;font-size:.95rem;padding:.55rem .9rem;border:0;border-radius:8px;background:var(--accent);color:#fff;cursor:pointer}
 @media print{.xat{display:none}}
+.xat-accions{display:flex;align-items:center;gap:.5rem;flex:none}
+.xat-nova{font:inherit;font-size:.82rem;font-weight:600;padding:.3rem .65rem;border-radius:6px;border:1px solid rgba(255,255,255,.45);background:transparent;color:#fff;cursor:pointer;white-space:nowrap}
+.xat-nova:hover{background:rgba(255,255,255,.12)}

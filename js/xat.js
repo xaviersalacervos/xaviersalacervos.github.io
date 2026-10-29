@@ -67,6 +67,8 @@
   var camp = document.getElementById('xat-camp');
   var tanca = document.getElementById('xat-tanca');
   var ultimBoto = null;
+  var INICI = fil.innerHTML;
+  var nova = document.getElementById('xat-nova');
 
   RESPOSTES.forEach(function (r) {
     var b = document.createElement('button');
@@ -108,6 +110,7 @@
 
   obrir.forEach(function (b) { b.addEventListener('click', obre); });
   tanca.addEventListener('click', tancaPanell);
+  if (nova) nova.addEventListener('click', function () { fil.innerHTML = INICI; camp.value = ''; suggerides.scrollTop = 0; camp.focus(); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !panell.hidden) tancaPanell(); });
   form.addEventListener('submit', function (e) {
     e.preventDefault();
