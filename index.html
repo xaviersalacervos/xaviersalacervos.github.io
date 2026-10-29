@@ -100,6 +100,7 @@
             <a class="btn btn-secondary" href="#contacte">Contacte</a>
             <a class="btn btn-secondary" href="cv/Francesc_Xavier_Sala_Cervos_CV.pdf" download>Descarrega el CV <span class="visually-hidden">(PDF)</span></a>
           </div>
+          <p class="chat-hint">Tens preguntes? <button type="button" class="link-btn" data-xat-obre aria-controls="xat" aria-expanded="false">Fes-les a l'assistent del meu CV</button>.</p>
         </div>
         <!-- Foto opcional: desa-la com a assets/foto.jpg (quadrada, mínim 600×600 px)
              i substitueix les inicials per:
@@ -465,6 +466,31 @@
   </main>
 
 
+
+  <button type="button" class="chat-fab" data-xat-obre aria-controls="xat" aria-expanded="false">
+    <span class="chat-fab-dot" aria-hidden="true"></span>
+    <span><strong>Pregunta pel meu CV</strong><small>Respostes preparades</small></span>
+  </button>
+
+  <section class="xat" id="xat" role="dialog" aria-modal="false" aria-labelledby="xat-titol" hidden>
+    <header class="xat-cap">
+      <div>
+        <h2 id="xat-titol">Pregunta pel meu CV</h2>
+        <p>Respostes preparades a partir del currículum.</p>
+      </div>
+      <button type="button" class="xat-tanca" id="xat-tanca" aria-label="Tanca">×</button>
+    </header>
+    <div class="xat-fil" id="xat-fil" aria-live="polite">
+      <div class="xat-msg xat-ell">Hola! Tria una pregunta o escriu-ne una amb les teves paraules.</div>
+    </div>
+    <div class="xat-suggerides" id="xat-suggerides" aria-label="Preguntes suggerides"></div>
+    <form class="xat-form" id="xat-form">
+      <label for="xat-camp" class="visually-hidden">La teva pregunta</label>
+      <input id="xat-camp" type="text" autocomplete="off" placeholder="Escriu la teva pregunta…">
+      <button type="submit">Envia</button>
+    </form>
+  </section>
+
   <footer class="site-footer">
     <div class="container">
       <p>© <span id="any">2026</span> Francesc Xavier Sala Cervós. Aquesta web no fa servir galetes ni analítica.</p>
@@ -472,5 +498,6 @@
   </footer>
 
   <script src="js/main.js" defer></script>
+  <script src="js/xat.js" defer></script>
 </body>
 </html>
