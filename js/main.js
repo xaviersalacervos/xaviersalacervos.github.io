@@ -43,3 +43,18 @@
   var any = document.getElementById('any');
   if (any) any.textContent = new Date().getFullYear();
 })();
+
+// Interruptor Sense IA / Amb IA de la secció Què ofereixo
+(function () {
+  var sw = document.getElementById('vista-ia');
+  var seccio = document.getElementById('expertesa');
+  if (!sw || !seccio) return;
+  function posa(on) {
+    sw.setAttribute('aria-checked', on ? 'true' : 'false');
+    seccio.classList.toggle('ia-on', on);
+  }
+  sw.addEventListener('click', function () { posa(sw.getAttribute('aria-checked') !== 'true'); });
+  Array.prototype.forEach.call(seccio.querySelectorAll('.vista-op'), function (b) {
+    b.addEventListener('click', function () { posa(b.getAttribute('data-vista') === 'ia'); });
+  });
+})();

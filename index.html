@@ -33,7 +33,7 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/fonts/sans-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/serif-600.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/style.css?v=3">
+  <link rel="stylesheet" href="css/style.css?v=4">
 
   <script>document.documentElement.classList.replace('no-js', 'js');</script>
 
@@ -136,48 +136,119 @@
       <div class="container">
         <p class="eyebrow">Què ofereixo</p>
         <h2 id="titol-expertesa">Formació, supervisió d'equips i disseny de projectes</h2>
-        <p class="section-lead">Les tres línies surten d'una trajectòria com a formador, coordinador d'equips i creador de projectes.</p>
+        <p class="section-lead">Les tres línies surten d'una trajectòria com a formador, coordinador d'equips i creador de projectes. <a href="#mapa">Mira al mapa d'on surt cada servei</a>.</p>
         <p class="credential"><strong>Habilitació docent.</strong> Acreditació de la formació pedagògica i didàctica per a la docència. Equivalent, a efectes d'habilitació docent, al requisit de formació pedagògica del Màster de Formació del Professorat.</p>
+
+        <div class="vista-switch">
+          <button type="button" class="vista-op" data-vista="persona" tabindex="-1" aria-hidden="true">Sense IA</button>
+          <button type="button" class="switch" id="vista-ia" role="switch" aria-checked="false">
+            <span class="visually-hidden">Mostra com treballo amb IA a cada servei</span>
+          </button>
+          <button type="button" class="vista-op" data-vista="ia" tabindex="-1" aria-hidden="true">Amb IA</button>
+          <p class="vista-nota">Activa l'interruptor per veure què hi aporta la IA a cada servei i on hi poso el límit.</p>
+        </div>
+
+        <ol class="proces" aria-label="Com treballo amb IA">
+          <li><strong>Plantejo</strong> l'objectiu, el context i el criteri.</li>
+          <li><strong>La IA proposa</strong> esborranys, alternatives i preguntes.</li>
+          <li><strong>Ho contrasto:</strong> reviso, hi discrepo i li demano que ho repensi.</li>
+          <li><strong>Decideixo</strong> la versió final i en responc jo.</li>
+        </ol>
 
         <div class="cards cards-3">
           <article class="card">
             <h3>Formació</h3>
-            <p>Docència per a persones que es formen per accedir a una professió i per a professionals i equips en actiu, amb enfocament pràctic.</p>
-            <ul class="offer-points">
-              <li>Disseny, planificació i avaluació de plans de formació</li>
-              <li>Formació professional per a l'ocupació i cursos ocupacionals</li>
-              <li>Formació de noves incorporacions</li>
-              <li>Suport a persones amb discapacitat intel·lectual i salut mental</li>
-              <li>Gestió de l'estrès i relaxació</li>
-              <li>Treball en equip, direcció d'equips i dinàmica de grups</li>
-              <li>Psicopatologia, tècniques d'estudi i psicomotricitat</li>
-            </ul>
+            <div class="vista-persona">
+              <p>Docència per a persones que es formen per accedir a una professió i per a professionals i equips en actiu, amb enfocament pràctic.</p>
+              <ul class="offer-points">
+                <li>Disseny, planificació i avaluació de plans de formació</li>
+                <li>Formació professional per a l'ocupació i cursos ocupacionals</li>
+                <li>Formació de noves incorporacions</li>
+                <li>Suport a persones amb discapacitat intel·lectual i salut mental</li>
+                <li>Gestió de l'estrès i relaxació</li>
+                <li>Treball en equip, direcció d'equips i dinàmica de grups</li>
+                <li>Psicopatologia, tècniques d'estudi i psicomotricitat</li>
+              </ul>
+            </div>
+            <div class="vista-ia">
+              <h4>Què hi aporta la IA</h4>
+              <ul class="offer-points">
+                <li>Un primer esborrany de guió, dinàmiques i materials en minuts, que em deixa més temps per pensar la sessió</li>
+                <li>Alternatives que no se m'havien acudit: una altra dinàmica, un exemple pensat per a un altre públic</li>
+                <li>Una mirada crítica: li demano que revisi el guió com ho faria un participant escèptic</li>
+              </ul>
+              <p class="limit"><strong>Límit:</strong> cap dada ni cita arriba a l'aula sense que l'hagi verificat.</p>
+            </div>
             <p class="evidence"><strong>Avala:</strong> formador entre 1998 i 2007 per al COPC, el Col·legi d'Infermeria, l'IAS, la UdG i l'Ajuntament d'Arbúcies, entre d'altres. Responsable de formació al Centre Ocupacional Tramuntana. Acreditació de la formació pedagògica i didàctica per a la docència.</p>
           </article>
 
           <article class="card">
             <h3>Supervisió d'equips</h3>
-            <p>Acompanyament a coordinadors i equips interdisciplinaris per ordenar la feina, resoldre conflictes i millorar l'atenció.</p>
-            <ul class="offer-points">
-              <li>Organització d'equips tècnics i educatius</li>
-              <li>Plans individuals d'atenció</li>
-              <li>Resolució de conflictes i negociació</li>
-              <li>Coordinació amb famílies, serveis socials i entitats</li>
-            </ul>
+            <div class="vista-persona">
+              <p>Acompanyament a coordinadors i equips interdisciplinaris per ordenar la feina, resoldre conflictes i millorar l'atenció.</p>
+              <ul class="offer-points">
+                <li>Organització d'equips tècnics i educatius</li>
+                <li>Plans individuals d'atenció</li>
+                <li>Resolució de conflictes i negociació</li>
+                <li>Coordinació amb famílies, serveis socials i entitats</li>
+              </ul>
+            </div>
+            <div class="vista-ia">
+              <h4>Què hi aporta la IA</h4>
+              <ul class="offer-points">
+                <li>Ordre a les notes de les sessions i detecció dels temes que es repeteixen</li>
+                <li>Preguntes per obrir la reflexió de l'equip</li>
+                <li>Hipòtesis alternatives per preparar la sessió, sempre a partir de casos anonimitzats</li>
+              </ul>
+              <p class="limit"><strong>Límit:</strong> la IA no és a les sessions i no rep cap dada que permeti identificar l'equip ni les persones ateses.</p>
+            </div>
             <p class="evidence"><strong>Avala:</strong> coordinació i direcció d'equips en quatre serveis: residencial, primera infància, centre ocupacional i servei d'ajustament personal i social. Formació en gestió d'equips (PIMEC), lideratge (Diputació de Girona), coaching i resolució de conflictes.</p>
           </article>
 
           <article class="card">
             <h3>Disseny de projectes</h3>
-            <p>Programes i estudis que neixen d'una necessitat detectada al territori i a les entitats.</p>
-            <ul class="offer-points">
-              <li>Disseny i implementació de projectes</li>
-              <li>Estudis de necessitats</li>
-              <li>Accessibilitat i senyalització</li>
-            </ul>
+            <div class="vista-persona">
+              <p>Programes i estudis que neixen d'una necessitat detectada al territori i a les entitats.</p>
+              <ul class="offer-points">
+                <li>Disseny i implementació de projectes</li>
+                <li>Estudis de necessitats</li>
+                <li>Accessibilitat i senyalització</li>
+              </ul>
+            </div>
+            <div class="vista-ia">
+              <h4>Què hi aporta la IA</h4>
+              <ul class="offer-points">
+                <li>Revisió de la coherència entre objectius, activitats i indicadors</li>
+                <li>Escenaris i riscos que costa veure des de dins del projecte</li>
+                <li>Una crítica exigent: li demano que avaluï la proposta com ho faria un finançador</li>
+              </ul>
+              <p class="limit"><strong>Límit:</strong> les dades surten de fonts verificades, mai de la memòria del model.</p>
+            </div>
             <p class="evidence"><strong>Avala:</strong> programa IEPA per a adolescents en risc social (2001), estudi sobre l'envelliment de persones amb discapacitat intel·lectual (2018) i estudi de senyalització universal d'equipaments municipals (2019). Projectes per a l'AFATRAM i el Centre Tramuntana.</p>
           </article>
         </div>
+      </div>
+    </section>
+
+    <!-- ===================== MAPA (constel·lació) ===================== -->
+    <section class="mapa" id="mapa" aria-labelledby="titol-mapa">
+      <div class="container">
+        <p class="eyebrow">Mapa de trajectòria</p>
+        <h2 id="titol-mapa">D'on surt cada servei</h2>
+        <p class="section-lead">Les tres estrelles grans són els serveis que ofereixo. Les petites són la trajectòria i la formació que els sostenen. Tria un servei per veure d'on surt.</p>
+        <div class="mapa-filtres" role="group" aria-label="Tria un servei">
+          <button type="button" class="mapa-filtre" data-id="F" aria-pressed="false">Formació</button>
+          <button type="button" class="mapa-filtre" data-id="S" aria-pressed="false">Supervisió d'equips</button>
+          <button type="button" class="mapa-filtre" data-id="P" aria-pressed="false">Disseny de projectes</button>
+        </div>
+        <div class="mapa-cel" id="mapa-cel"></div>
+        <ul class="mapa-llegenda" aria-hidden="true">
+          <li><i class="ll-srv"></i>Servei</li>
+          <li><i class="ll-exp"></i>Trajectòria</li>
+          <li><i class="ll-form"></i>Formació</li>
+          <li><i class="ll-ia"></i>Formació en IA</li>
+        </ul>
+        <div class="mapa-info" id="mapa-info" aria-live="polite"></div>
       </div>
     </section>
 
@@ -495,7 +566,8 @@
     </div>
   </footer>
 
-  <script src="js/main.js" defer></script>
+  <script src="js/main.js?v=2" defer></script>
   <script src="js/xat.js?v=1" defer></script>
+  <script src="js/mapa.js?v=1" defer></script>
 </body>
 </html>
