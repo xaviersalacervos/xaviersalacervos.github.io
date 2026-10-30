@@ -353,3 +353,5 @@ details li { margin-bottom: 0.35rem; font-size: 0.98rem; }
 @media (prefers-reduced-motion:reduce){.tast-pols,.tast-estrella .tast-halo,.mapa-tast-punt{animation:none}}
 @media print{.hero-cel,.mapa-tast{display:none}}
 .site-footer p+p{margin-top:.4rem}
+.site-footer{padding-bottom:calc(6rem + env(safe-area-inset-bottom,0px))}
+.chat-fab{border:1px solid rgba(255,255,255,.35)}
