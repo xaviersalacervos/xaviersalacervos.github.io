@@ -6,7 +6,7 @@
   var RESPOSTES = [
     {
       q: 'Què pots aportar a una entitat social?',
-      a: "Hi aporto més de 25 anys d'experiència amb persones amb discapacitat intel·lectual, salut mental, infància i adolescència, i amb els equips que les acompanyen.\n\nOfereixo tres línies de treball: formació (per a professionals en actiu i formació per a l'ocupació), supervisió d'equips i disseny de projectes a partir de les necessitats de l'entitat i del territori. Hi incorporo la intel·ligència artificial com a eina de treball, sempre amb criteri professional."
+      a: "Hi aporto més de 25 anys d'experiència amb persones amb discapacitat intel·lectual, salut mental, infància i adolescència, i amb els equips que les acompanyen.\n\nPuc aportar-hi tres àmbits de treball: formació (per a professionals en actiu i formació per a l'ocupació), supervisió d'equips i disseny de projectes a partir de les necessitats de l'entitat i del territori. Hi incorporo la intel·ligència artificial com a eina de treball, sempre amb criteri professional."
     },
     {
       q: 'Has dirigit o coordinat equips? De quina mida?',
