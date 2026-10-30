@@ -352,3 +352,4 @@ details li { margin-bottom: 0.35rem; font-size: 0.98rem; }
 .mapa-tast-punt{width:.7rem;height:.7rem;border-radius:50%;background:currentColor;box-shadow:0 0 0 4px rgba(164,71,31,.18);animation:titil 2.4s ease-in-out infinite}
 @media (prefers-reduced-motion:reduce){.tast-pols,.tast-estrella .tast-halo,.mapa-tast-punt{animation:none}}
 @media print{.hero-cel,.mapa-tast{display:none}}
+.site-footer p+p{margin-top:.4rem}
