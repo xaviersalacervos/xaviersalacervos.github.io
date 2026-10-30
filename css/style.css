@@ -355,3 +355,40 @@ details li { margin-bottom: 0.35rem; font-size: 0.98rem; }
 .site-footer p+p{margin-top:.4rem}
 .site-footer{padding-bottom:calc(6rem + env(safe-area-inset-bottom,0px))}
 .chat-fab{border:1px solid rgba(255,255,255,.35)}
+
+/* ---------- Perfil a mida ---------- */
+.no-js .amida{display:none}
+.amida{background:var(--surface)}
+.amida-ops{display:grid;gap:.75rem;grid-template-columns:1fr;margin:0 0 1.5rem}
+@media (min-width:48rem){.amida-ops{grid-template-columns:repeat(3,1fr)}}
+.amida-op{font:inherit;text-align:left;cursor:pointer;background:var(--paper);color:var(--ink);border:1px solid var(--line);border-radius:var(--radius);padding:1rem 1.1rem;font-family:var(--serif);font-size:1.2rem;font-weight:600;line-height:1.25;transition:border-color .2s,background .2s,transform .2s}
+.amida-op small{display:block;font-family:var(--sans);font-weight:400;font-size:.92rem;color:var(--muted);margin-top:.25rem}
+.amida-op-n{display:block;font-family:var(--sans);font-size:.78rem;letter-spacing:.12em;color:var(--accent);margin-bottom:.35rem}
+.amida-op:hover{border-color:var(--accent);transform:translateY(-2px)}
+.amida-op[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.amida-op[aria-pressed="true"] small{color:#D5E1E4}
+.amida-op[aria-pressed="true"] .amida-op-n{color:#F3C9B4}
+.amida-panell{border:1px solid var(--line);border-top:4px solid var(--accent);border-radius:var(--radius);background:var(--paper);padding:1.25rem}
+@media (min-width:48rem){.amida-panell{padding:1.75rem 2rem}}
+.amida-entra{animation:amidaEntra .45s ease-out}
+@keyframes amidaEntra{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.amida-entra{animation:none}.amida-op{transition:none}.amida-op:hover{transform:none}}
+.amida-per{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:600;margin:0 0 .25rem}
+.amida-cap h3{font-size:1.45rem;margin-bottom:.4rem}
+.amida-cap p{color:var(--muted)}
+.amida-cols{display:grid;gap:1.25rem 2.5rem;grid-template-columns:1fr}
+@media (min-width:48rem){.amida-cols{grid-template-columns:1.1fr 1fr}}
+.amida h4{font-family:var(--sans);font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);margin:1rem 0 .5rem}
+.amida-encaix,.amida-form{margin:0;padding-left:1.1rem}
+.amida-encaix li,.amida-form li{margin:0 0 .4rem}
+.amida-passos{list-style:none;margin:0;padding:0;counter-reset:pas}
+.amida-passos li{counter-increment:pas;position:relative;padding:0 0 .55rem 2.3rem;min-height:1.8rem}
+.amida-passos li::before{content:counter(pas);position:absolute;left:0;top:0;width:1.7rem;height:1.7rem;border-radius:50%;background:var(--accent);color:#fff;font-weight:600;font-size:.9rem;display:flex;align-items:center;justify-content:center}
+.amida-exp{list-style:none;margin:0;padding:0 0 0 1rem;border-left:2px solid var(--line)}
+.amida-exp li{position:relative;margin:0 0 .7rem}
+.amida-exp li::before{content:"";position:absolute;left:calc(-1rem - 6px);top:.45rem;width:10px;height:10px;border-radius:50%;background:var(--ink)}
+.amida-exp strong{display:block;color:var(--ink)}
+.amida-exp span{display:block;color:var(--muted);font-size:.95rem}
+.amida-exp em{font-style:normal;font-size:.88rem;color:var(--accent);font-weight:600}
+.amida-ia{background:var(--surface);border-left:3px solid var(--ink);padding:.7rem .9rem;margin:1rem 0 0;font-size:.97rem}
+.amida-accions{display:flex;flex-wrap:wrap;gap:.75rem 1.25rem;align-items:center;margin-top:1.5rem;padding-top:1.25rem;border-top:1px solid var(--line)}
