@@ -55,7 +55,7 @@
           x: 0, y: 0, vx: 0, vy: 0,
           c: 'rgb(' + dades[i] + ',' + dades[i + 1] + ',' + dades[i + 2] + ')',
           r: pas * (0.42 + Math.random() * 0.18),
-          ret: 0.9 + Math.random() * 1.4
+          ret: 1.4 + Math.random() * 1.4
         });
       }
     }
@@ -95,7 +95,8 @@
         var e = suau(t);
         p.x = p.sx + (p.tx - p.sx) * e;
         p.y = p.sy + (p.ty - p.sy) * e;
-        ctx.globalAlpha = temps < p.ret ? Math.min(1, temps / 0.9) * 0.55 : 0.55 + 0.45 * e;
+        if (temps < p.ret) continue;
+        ctx.globalAlpha = Math.min(1, t * 5) * (0.55 + 0.45 * e);
       } else {
         if (ratoli) {
           var dx = p.x - ratoli.x, dy = p.y - ratoli.y, d2 = dx * dx + dy * dy, R = S * 0.22;
@@ -116,7 +117,7 @@
       ctx.fill();
     }
 
-    if (estat === 'forma' && temps > 5.2) {
+    if (estat === 'forma' && temps > 5.6) {
       estat = 'repos';
       slot.classList.remove('retrat-inici');
       slot.classList.add('retrat-fet');
@@ -209,7 +210,7 @@
     slot.appendChild(cv);
     slot.classList.add('retrat-inici', 'retrat-actiu');
     var hero = slot.closest ? slot.closest('.hero') : null;
-    if (hero) setTimeout(function () { hero.classList.add('amb-retrat'); }, 900);
+    if (hero) setTimeout(function () { hero.classList.add('amb-retrat'); }, 1400);
     slot.addEventListener('pointermove', juga);
     slot.addEventListener('pointerdown', juga);
     slot.addEventListener('pointerleave', function () { ratoli = null; });
