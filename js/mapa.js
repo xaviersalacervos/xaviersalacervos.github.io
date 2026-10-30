@@ -19,7 +19,7 @@
     { id: 'e3', nom: "Servei d'Ajustament Personal i Social", det: 'Director tècnic i psicòleg · 63 persones treballadores amb discapacitat · 2008–2015', s: ['F', 'S'] },
     { id: 'e4', nom: 'Serveis per a infants de 0 a 3 anys', det: 'Coordinador · Ajuntament de Sant Feliu de Guíxols · 2004–2007', s: ['S'] },
     { id: 'e5', nom: 'Llar-Residència Llar 2000', det: 'Director tècnic del recurs residencial · 2003–2004', s: ['S'] },
-    { id: 'e6', nom: 'Educador social', det: 'Llar-2000, CRAE Sobrequés i EBASP de Tossa de Mar · 2000–2008', s: ['F', 'S'] },
+    { id: 'e6', nom: 'Educador social', det: 'Llar-2000, CRAE Sobrequés i EBASP de Tossa de Mar · 2000–2008', s: ['S'] },
     { id: 'e7', nom: 'Projecte IEPA', det: 'Programa per a adolescents en risc social · Serveis Socials de Palafrugell · 2001', s: ['P'] },
     { id: 'e8', nom: 'Estudis per al territori', det: "Envelliment i discapacitat intel·lectual (2018) · Senyalització universal d'equipaments municipals (2019)", s: ['P'] }
   ];
