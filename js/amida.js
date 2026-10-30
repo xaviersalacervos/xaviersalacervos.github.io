@@ -1,4 +1,4 @@
-// Perfil a mida: qui contracta tria el tipus de lloc i la web li mostra
+// Perfil a mida (dins de Què aporto): qui contracta obre el perfil d'un lloc i la web li mostra
 // l'encaix, l'experiència que l'avala i una fitxa d'una pàgina per descarregar.
 var PERFILS_A_MIDA = {
   formacio: {
@@ -90,7 +90,7 @@ var PERFILS_A_MIDA = {
 
 (function () {
   if (typeof document === 'undefined') return;
-  var seccio = document.getElementById('a-mida');
+  var seccio = document.getElementById('expertesa');
   var panell = document.getElementById('amida-panell');
   if (!seccio || !panell) return;
   var botons = Array.prototype.slice.call(seccio.querySelectorAll('.amida-op'));
@@ -102,10 +102,25 @@ var PERFILS_A_MIDA = {
     return items.map(function (t) { return '<li>' + esc(t) + '</li>'; }).join('');
   }
 
+  function marca(id) {
+    botons.forEach(function (b) {
+      var on = b.getAttribute('data-perfil') === id;
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      var card = b.closest ? b.closest('.card') : null;
+      if (card) card.classList.toggle('amida-sel', on);
+    });
+  }
+
+  function tanca() {
+    marca(null);
+    panell.hidden = true;
+    if (window.history && history.replaceState) history.replaceState(null, '', location.pathname + location.search);
+  }
+
   function mostra(id, desdeHash) {
     var p = PERFILS_A_MIDA[id];
     if (!p) return;
-    botons.forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-perfil') === id ? 'true' : 'false'); });
+    marca(id);
     var exp = p.experiencia.map(function (e) {
       return '<li><strong>' + esc(e[0]) + '</strong><span>' + esc(e[1]) + '</span><em>' + esc(e[2]) + '</em></li>';
     }).join('');
@@ -121,6 +136,7 @@ var PERFILS_A_MIDA = {
       '<div class="amida-accions">' +
         '<a class="btn btn-primary" href="' + p.fitxa + '" download>Descarrega la fitxa <span class="visually-hidden">(PDF)</span></a>' +
         '<a class="btn btn-secondary" href="#contacte">Parlem-ne</a>' +
+        '<button type="button" class="link-btn" data-amida-tanca>Tanca</button>' +
         '<button type="button" class="link-btn" data-amida-mapa="' + p.mapa + '">Mira-ho al mapa</button>' +
         '<button type="button" class="link-btn" data-amida-copia>Copia l\'enllaç d\'aquest perfil</button>' +
       '</div>';
@@ -129,16 +145,24 @@ var PERFILS_A_MIDA = {
     void panell.offsetWidth;
     panell.classList.add('amida-entra');
     if (!desdeHash && window.history && history.replaceState) history.replaceState(null, '', '#perfil-' + id);
+    panell.scrollIntoView({ behavior: desdeHash ? 'auto' : 'smooth', block: 'start' });
   }
 
   botons.forEach(function (b) {
-    b.addEventListener('click', function () { mostra(b.getAttribute('data-perfil')); });
+    b.addEventListener('click', function () {
+      if (b.getAttribute('aria-pressed') === 'true') tanca();
+      else mostra(b.getAttribute('data-perfil'));
+    });
   });
 
   panell.addEventListener('click', function (e) {
     var t = e.target.closest ? e.target.closest('button') : null;
     if (!t) return;
-    if (t.hasAttribute('data-amida-mapa')) {
+    if (t.hasAttribute('data-amida-tanca')) {
+      var obert = seccio.querySelector('.amida-op[aria-pressed="true"]');
+      tanca();
+      if (obert) obert.focus();
+    } else if (t.hasAttribute('data-amida-mapa')) {
       var f = document.querySelector('.mapa-filtre[data-id="' + t.getAttribute('data-amida-mapa') + '"]');
       var mapa = document.getElementById('mapa');
       if (mapa) mapa.scrollIntoView({ behavior: 'smooth' });
@@ -153,6 +177,5 @@ var PERFILS_A_MIDA = {
   var m = /^#perfil-(\w+)$/.exec(location.hash);
   if (m && PERFILS_A_MIDA[m[1]]) {
     mostra(m[1], true);
-    seccio.scrollIntoView();
   }
 })();
