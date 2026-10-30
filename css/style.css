@@ -396,7 +396,25 @@ details li { margin-bottom: 0.35rem; font-size: 0.98rem; }
 .traj-anterior .timeline{margin:0 1.25rem 1.25rem}
 
 /* ---------- 25 anys en moviment ---------- */
-@media (min-width:48rem){.js .timeline.en-moviment{position:relative}
+.js .timeline.en-moviment{position:relative}
 .js .timeline.en-moviment::after{content:"";position:absolute;left:-2px;top:0;width:2px;height:calc(var(--prog,0) * 100%);background:var(--accent);box-shadow:0 0 8px rgba(164,71,31,.55)}
 .js .timeline.en-moviment > li::before{transition:background .4s,border-color .4s,box-shadow .4s;z-index:1}
 .js .timeline.en-moviment > li.vist::before{background:var(--accent);border-color:var(--accent);box-shadow:0 0 0 4px rgba(164,71,31,.18)}
+
+/* ---------- Retrat d'estrelles ---------- */
+@media (min-width:48rem){.photo-slot{width:15rem;height:15rem}}
+.photo-slot.retrat-actiu{position:relative;overflow:visible;background:transparent}
+.photo-slot.retrat-actiu img{border-radius:50%;opacity:0;transition:opacity .7s ease}
+.photo-slot.retrat-fet img{opacity:1}
+.retrat-cel{position:absolute;pointer-events:none;z-index:2;transition:opacity .7s ease}
+.photo-slot.retrat-fet .retrat-cel{opacity:0}
+.cometes-cel{position:absolute;pointer-events:none;z-index:3}
+.hero.amb-retrat .hero-cel{display:none}
+@media (min-width:48rem){.hero.amb-retrat .photo-slot{margin-right:10rem}}
+.ambit-estrella{position:absolute;z-index:3;width:0;height:0;pointer-events:none}
+.ambit-estrella i{position:absolute;left:-6px;top:-6px;width:12px;height:12px;border-radius:50%;background:var(--accent);transform:scale(0);box-shadow:0 0 0 0 rgba(164,71,31,.35);transition:transform .5s cubic-bezier(.3,1.6,.5,1)}
+.ambit-estrella b{font-family:var(--sans);position:absolute;left:14px;top:-.62rem;white-space:nowrap;font-size:.8rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);opacity:0;transform:translateX(-6px);transition:opacity .6s .15s,transform .6s .15s}
+.ambit-estrella.encesa i{transform:scale(1);animation:ambitBatec 3.6s ease-in-out .6s infinite}
+.ambit-estrella.encesa b{opacity:1;transform:none}
+@keyframes ambitBatec{0%,100%{box-shadow:0 0 0 0 rgba(164,71,31,.35)}50%{box-shadow:0 0 0 7px rgba(164,71,31,0)}}
+@media (max-width:47.99rem){.ambit-estrella b{font-size:.72rem;letter-spacing:.04em}}
