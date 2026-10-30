@@ -33,7 +33,7 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/fonts/sans-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/serif-600.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/style.css?v=6">
+  <link rel="stylesheet" href="css/style.css?v=8">
 
   <script>document.documentElement.classList.replace('no-js', 'js');</script>
 
@@ -100,7 +100,7 @@
           <p class="hero-title">Formació · Supervisió d'equips · Disseny de projectes</p>
           <p class="hero-value">Més de 25 anys donant suport a les persones i als equips que les acompanyen. Busco incorporar-me a una entitat, administració o empresa en un lloc tècnic de formació, assessorament d'equips o disseny de projectes. També estic obert a col·laboracions puntuals.</p>
           <div class="actions">
-            <a class="btn btn-primary" href="#expertesa">Què aporto</a>
+            <a class="btn btn-primary" href="#expertesa">El meu perfil per al vostre lloc</a>
             <a class="btn btn-secondary" href="#contacte">Contacte</a>
             <a class="btn btn-secondary" href="cv/Francesc_Xavier_Sala_Cervos_CV.pdf" download>Descarrega el CV <span class="visually-hidden">(PDF)</span></a>
           </div>
@@ -163,7 +163,7 @@
       <div class="container">
         <p class="eyebrow">Què aporto</p>
         <h2 id="titol-expertesa">Què puc aportar a la vostra entitat</h2>
-        <p class="section-lead">Formació, supervisió d'equips i disseny de projectes: tres àmbits que surten d'una trajectòria com a formador, coordinador d'equips i creador de projectes. <a href="#mapa">Mira al mapa d'on surt cada àmbit</a>.</p>
+        <p class="section-lead">Formació, supervisió d'equips i disseny de projectes: tres àmbits que surten d'una trajectòria com a formador, coordinador d'equips i creador de projectes. <a href="#mapa">Mira al mapa d'on surt cada àmbit</a>. Si busqueu algú per a un d'aquests llocs, obriu-ne el perfil: hi veureu per què hi encaixo i en podreu descarregar la fitxa.</p>
         <p class="credential"><strong>Habilitació docent.</strong> Acreditació de la formació pedagògica i didàctica per a la docència. Equivalent, a efectes d'habilitació docent, al requisit de formació pedagògica del Màster de Formació del Professorat.</p>
 
         <div class="vista-switch">
@@ -208,6 +208,7 @@
               <p class="limit"><strong>Límit:</strong> cap dada ni cita arriba a l'aula sense que l'hagi verificat.</p>
             </div>
             <p class="evidence"><strong>Avala:</strong> formador entre 1998 i 2007 per al COPC, el Col·legi d'Infermeria, l'IAS, la UdG i l'Ajuntament d'Arbúcies, entre d'altres. Responsable de formació al Centre Ocupacional Tramuntana. Acreditació de la formació pedagògica i didàctica per a la docència.</p>
+            <button type="button" class="amida-op" data-perfil="formacio" aria-pressed="false" aria-controls="amida-panell">Perfil per a un lloc de formació</button>
           </article>
 
           <article class="card">
@@ -231,6 +232,7 @@
               <p class="limit"><strong>Límit:</strong> només amb el consentiment explícit de l'equip, sobre temes pactats abans i amb eines que compleixin el RGPD. Abans de cap anàlisi elimino tota dada que permeti identificar ningú, i l'àudio s'esborra.</p>
             </div>
             <p class="evidence"><strong>Avala:</strong> coordinació i direcció d'equips en quatre serveis: residencial, primera infància, centre ocupacional i servei d'ajustament personal i social. Formació en gestió d'equips (PIMEC), lideratge (Diputació de Girona) i coaching.</p>
+            <button type="button" class="amida-op" data-perfil="assessorament" aria-pressed="false" aria-controls="amida-panell">Perfil per a un lloc d'assessorament</button>
           </article>
 
           <article class="card">
@@ -254,8 +256,10 @@
               <p class="limit"><strong>Límit:</strong> tota xifra, norma o dada del territori que entra en un projecte la comprovo en fonts oficials (Idescat, Generalitat, la convocatòria). No en dono cap per bona només perquè la digui la IA.</p>
             </div>
             <p class="evidence"><strong>Avala:</strong> programa IEPA per a adolescents en risc social (2001), estudi sobre l'envelliment de persones amb discapacitat intel·lectual (2018) i estudi de senyalització universal d'equipaments municipals (2019). Projectes per a l'AFATRAM i el Centre Tramuntana.</p>
+            <button type="button" class="amida-op" data-perfil="projectes" aria-pressed="false" aria-controls="amida-panell">Perfil per a un lloc de projectes</button>
           </article>
         </div>
+        <div class="amida-panell" id="amida-panell" aria-live="polite" hidden></div>
       </div>
     </section>
 
@@ -305,6 +309,10 @@
             </ul>
           </li>
 
+        </ol>
+        <details class="traj-anterior">
+          <summary>Trajectòria anterior (1994–2004) <span class="count">llar-residència, educació social, formació i inicis</span></summary>
+          <ol class="timeline">
           <li>
             <h3>Director Tècnic</h3>
             <p class="meta">Llar-Residència «Llar 2000» per a persones amb discapacitat intel·lectual · Plataforma Educativa · Palafrugell<br>
@@ -352,7 +360,8 @@
               <li>Monitor d'activitats de lleure juvenil (Palafrugell, 2001).</li>
             </ul>
           </li>
-        </ol>
+          </ol>
+        </details>
       </div>
     </section>
 
@@ -492,27 +501,8 @@
         <p class="eyebrow">IA i gestió estratègica de les persones</p>
         <h2 id="titol-ia">La IA, integrada en la meva manera de treballar</h2>
         <div class="ia-intro">
-          <p class="section-lead" style="margin:0">La meva aposta és sumar la IA a l'experiència directiva i formativa. Serveix per preparar millor, analitzar més ràpid i dedicar més temps a les persones i als equips.</p>
+          <p class="section-lead" style="margin:0">La faig servir per preparar millor, analitzar més ràpid i dedicar més temps a les persones i als equips. A <a href="#expertesa">Què aporto</a> pots veure què hi aporta a cada àmbit i on hi poso el límit.</p>
           <p class="status-note"><strong>Aposta en marxa:</strong> des del 2025 em formo en IA aplicada a la feina i a la gestió d'entitats (detall a <a href="#formacio-complementaria">Formació complementària</a>).</p>
-        </div>
-
-        <div class="cards" style="margin-bottom:2.5rem">
-          <article class="card">
-            <h3>Formació</h3>
-            <p>Dissenyar i actualitzar cursos més de pressa i adaptar-los a cada grup: guions, dinàmiques, materials i avaluació.</p>
-          </article>
-          <article class="card">
-            <h3>Supervisió d'equips</h3>
-            <p>Preparar les sessions i ordenar els temes recurrents, perquè la supervisió se centri en la reflexió de l'equip.</p>
-          </article>
-          <article class="card">
-            <h3>Assessorament a la direcció</h3>
-            <p>Analitzar el funcionament d'un servei o d'una organització i convertir-ho en propostes concretes per a l'equip directiu.</p>
-          </article>
-          <article class="card">
-            <h3>El criteri, sempre humà</h3>
-            <p>La IA prepara, ordena i proposa. La valoració professional, la relació amb les persones i les decisions són meves.</p>
-          </article>
         </div>
 
         <h3>Com la faig servir</h3>
@@ -576,5 +566,6 @@
   <script src="js/main.js?v=3" defer></script>
   <script src="js/xat.js?v=2" defer></script>
   <script src="js/mapa.js?v=4" defer></script>
+  <script src="js/amida.js?v=2" defer></script>
 </body>
 </html>
