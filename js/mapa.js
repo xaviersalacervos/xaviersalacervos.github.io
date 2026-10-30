@@ -16,10 +16,10 @@
   var TRAJECTORIA = [
     { id: 'e1', nom: 'Formador per a 6 institucions', det: "COPC, Col·legi d'Infermeria, IAS, UdG, Ajuntament d'Arbúcies i Plataforma Educativa · 1998–2007", s: ['F'] },
     { id: 'e2', nom: 'Centre Ocupacional Tramuntana', det: 'Director tècnic i responsable de formació · 23 professionals i 117 persones ateses · 2008–2026', s: ['F', 'S', 'P'] },
-    { id: 'e3', nom: "Servei d'Ajustament Personal i Social", det: 'Director tècnic i psicòleg · 63 persones treballadores amb discapacitat · 2008–2015', s: ['S'] },
+    { id: 'e3', nom: "Servei d'Ajustament Personal i Social", det: 'Director tècnic i psicòleg · 63 persones treballadores amb discapacitat · 2008–2015', s: ['F', 'S'] },
     { id: 'e4', nom: 'Serveis per a infants de 0 a 3 anys', det: 'Coordinador · Ajuntament de Sant Feliu de Guíxols · 2004–2007', s: ['S'] },
     { id: 'e5', nom: 'Llar-Residència Llar 2000', det: 'Director tècnic del recurs residencial · 2003–2004', s: ['S'] },
-    { id: 'e6', nom: 'Educador social', det: 'Llar-2000, CRAE Sobrequés i EBASP de Tossa de Mar · 2000–2008', s: ['S'] },
+    { id: 'e6', nom: 'Educador social', det: 'Llar-2000, CRAE Sobrequés i EBASP de Tossa de Mar · 2000–2008', s: ['F', 'S'] },
     { id: 'e7', nom: 'Projecte IEPA', det: 'Programa per a adolescents en risc social · Serveis Socials de Palafrugell · 2001', s: ['P'] },
     { id: 'e8', nom: 'Estudis per al territori', det: "Envelliment i discapacitat intel·lectual (2018) · Senyalització universal d'equipaments municipals (2019)", s: ['P'] }
   ];
@@ -28,12 +28,13 @@
     { id: 'f1', nom: 'Habilitació docent', det: 'Acreditació de la formació pedagògica i didàctica per a la docència', s: ['F'] },
     { id: 'f2', nom: "Forma't per formar", det: '5 cursos de la Generalitat sobre formació professional · 2026', s: ['F'] },
     { id: 'f3', nom: 'Màster en Mediació Terapèutica Corporal', det: 'Crei-Sants, Universitat de Barcelona · psicomotricitat i expressió corporal', s: ['F'] },
-    { id: 'f4', nom: 'Llicenciatura en Psicologia', det: 'UAB · 1992 · psicòleg general sanitari habilitat', s: ['F', 'S'] },
+    { id: 'f4', nom: 'Llicenciatura en Psicologia', det: 'UAB · 1992 · psicòleg general sanitari habilitat', s: ['F', 'S', 'P'] },
     { id: 'f5', nom: 'Educador social habilitat', det: 'Habilitat el 2002', s: ['S'] },
     { id: 'f6', nom: "Lideratge i gestió d'equips", det: '10 cursos: PIMEC, Diputació de Girona, UdG, coaching, negociació i resolució de conflictes', s: ['S'] },
     { id: 'f7', nom: 'Postgrau en Patologia Dual', det: 'Universitat de Girona · 190 h · 2010–2011', s: ['S'] },
     { id: 'f8', nom: 'Postgrau en Psicoteràpia', det: 'Institut Erich Fromm · 1993', s: ['S'] },
-    { id: 'f9', nom: 'Postgrau en Integració Laboral', det: 'Universitat de Girona · 200 h · 2012', s: ['P'] },
+    { id: 'f9', nom: 'Postgrau en Integració Laboral', det: 'Universitat de Girona · 200 h · 2012', s: ['F', 'P'] },
+    { id: 'f11', nom: 'Formació contínua especialitzada', det: '13 cursos: discapacitat i salut mental, inserció laboral, comunicació amb la ciutadania, prevenció i primers auxilis psicològics · 2008–2021', s: ['F', 'S', 'P'] },
     { id: 'f10', nom: 'Formació en IA', det: '7 cursos des del 2025: Diputació de Girona, COPC, Plena Inclusión, BIG School i PIMEC', s: ['F', 'S', 'P'], ia: true }
   ];
 
