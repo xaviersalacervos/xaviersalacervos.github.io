@@ -394,3 +394,11 @@ details li { margin-bottom: 0.35rem; font-size: 0.98rem; }
 .amida-accions{display:flex;flex-wrap:wrap;gap:.75rem 1.25rem;align-items:center;margin-top:1.5rem;padding-top:1.25rem;border-top:1px solid var(--line)}
 .traj-anterior{margin-top:.5rem}
 .traj-anterior .timeline{margin:0 1.25rem 1.25rem}
+
+/* ---------- Retrat d'estrelles ---------- */
+@media (min-width:48rem){.photo-slot{width:15rem;height:15rem}}
+.photo-slot.retrat-actiu{position:relative;overflow:visible;background:transparent}
+.photo-slot.retrat-actiu img{border-radius:50%;opacity:0;transition:opacity .7s ease}
+.photo-slot.retrat-fet img{opacity:1}
+.retrat-cel{position:absolute;pointer-events:none;z-index:2;transition:opacity .7s ease}
+.photo-slot.retrat-fet .retrat-cel{opacity:0}
