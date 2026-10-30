@@ -1,5 +1,5 @@
-// Retrat d'estrelles: la foto de la portada es forma a partir d'una nebulosa de punts
-// i, en passar-hi el ratolí o el dit, els punts s'aparten i tornen. Sense JS o amb
+// Retrat d'estrelles: els punts surten del dibuix de la constel·lació de la portada i
+// formen la foto; en passar-hi el ratolí o el dit, s'aparten i tornen. Sense JS o amb
 // «moviment reduït» es veu la foto normal.
 (function () {
   var slot = document.querySelector('.photo-slot');
@@ -14,15 +14,23 @@
   if (!ctx) return;
 
   var dpr = Math.min(window.devicePixelRatio || 1, 2);
-  var punts = [], S = 0, M = 0, inici = 0, estat = 'forma', ratoli = null, quiet = 0;
+  var punts = [], S = 0, M = 0, CW = 0, CH = 0, OX = 0, OY = 0, inici = 0, estat = 'forma', ratoli = null, quiet = 0;
 
   function prepara() {
     S = slot.offsetWidth;
     M = Math.round(S * 0.35);
-    var W = S + 2 * M;
-    cv.width = W * dpr; cv.height = W * dpr;
-    cv.style.width = W + 'px'; cv.style.height = W + 'px';
-    cv.style.left = -M + 'px'; cv.style.top = -M + 'px';
+    // La tela cobreix la foto i tot el dibuix de la constel·lació.
+    var sb = slot.getBoundingClientRect();
+    var x0 = sb.left - M, y0 = sb.top - M, x1 = sb.right + M, y1 = sb.bottom + M;
+    var fonts = origens();
+    fonts.forEach(function (f) {
+      x0 = Math.min(x0, f[0] - 8); y0 = Math.min(y0, f[1] - 8);
+      x1 = Math.max(x1, f[0] + 8); y1 = Math.max(y1, f[1] + 8);
+    });
+    OX = sb.left - x0; OY = sb.top - y0; CW = x1 - x0; CH = y1 - y0;
+    cv.width = CW * dpr; cv.height = CH * dpr;
+    cv.style.width = CW + 'px'; cv.style.height = CH + 'px';
+    cv.style.left = -OX + 'px'; cv.style.top = -OY + 'px';
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
     var mostra = document.createElement('canvas');
@@ -38,25 +46,47 @@
       for (var x = pas / 2; x < S; x += pas) {
         if ((x - r) * (x - r) + (y - r) * (y - r) > r * r) continue;
         var i = ((y | 0) * S + (x | 0)) * 4;
+        var f = fonts.length ? fonts[(Math.random() * fonts.length) | 0] : null;
         var a = Math.random() * Math.PI * 2, d = r * (0.55 + Math.random() * 0.6);
         punts.push({
-          tx: x + M, ty: y + M,
-          sx: r + M + Math.cos(a) * d, sy: r + M + Math.sin(a) * d,
+          tx: x + OX, ty: y + OY,
+          sx: f ? f[0] - x0 + (Math.random() - 0.5) * 3 : r + OX + Math.cos(a) * d,
+          sy: f ? f[1] - y0 + (Math.random() - 0.5) * 3 : r + OY + Math.sin(a) * d,
           x: 0, y: 0, vx: 0, vy: 0,
           c: 'rgb(' + dades[i] + ',' + dades[i + 1] + ',' + dades[i + 2] + ')',
           r: pas * (0.42 + Math.random() * 0.18),
-          ret: Math.random() * 1.4
+          ret: 0.9 + Math.random() * 1.4
         });
       }
     }
     return true;
   }
 
+  // Punts del dibuix de la constel·lació (línies, estels i estrelles), en coordenades de pantalla.
+  function origens() {
+    var cel = document.querySelector('.hero-cel svg');
+    var out = [];
+    if (!cel || !cel.getBoundingClientRect().width) return out;
+    Array.prototype.forEach.call(cel.querySelectorAll('path'), function (pth) {
+      var m = pth.getScreenCTM(), L = pth.getTotalLength();
+      if (!m) return;
+      for (var l = 0; l <= L; l += 6) {
+        var q = pth.getPointAtLength(l).matrixTransform(m);
+        out.push([q.x, q.y]);
+      }
+    });
+    Array.prototype.forEach.call(cel.querySelectorAll('circle'), function (c) {
+      var b = c.getBoundingClientRect();
+      var n = c.classList.contains('tast-halo') ? 0 : (c.classList.contains('tast-nucli') ? 40 : 6);
+      for (var k = 0; k < n; k++) out.push([b.left + b.width / 2, b.top + b.height / 2]);
+    });
+    return out;
+  }
+
   function suau(t) { return 1 - Math.pow(1 - t, 3); }
 
   function dibuixa(ara) {
-    var W = S + 2 * M;
-    ctx.clearRect(0, 0, W, W);
+    ctx.clearRect(0, 0, CW, CH);
     var temps = (ara - inici) / 1000, mogut = 0;
     for (var k = 0; k < punts.length; k++) {
       var p = punts[k];
@@ -65,7 +95,7 @@
         var e = suau(t);
         p.x = p.sx + (p.tx - p.sx) * e;
         p.y = p.sy + (p.ty - p.sy) * e;
-        ctx.globalAlpha = 0.25 + 0.75 * e;
+        ctx.globalAlpha = temps < p.ret ? Math.min(1, temps / 0.9) * 0.55 : 0.55 + 0.45 * e;
       } else {
         if (ratoli) {
           var dx = p.x - ratoli.x, dy = p.y - ratoli.y, d2 = dx * dx + dy * dy, R = S * 0.22;
@@ -86,8 +116,9 @@
       ctx.fill();
     }
 
-    if (estat === 'forma' && temps > 4.2) {
+    if (estat === 'forma' && temps > 5.2) {
       estat = 'repos';
+      slot.classList.remove('retrat-inici');
       slot.classList.add('retrat-fet');
       setTimeout(cometes, 700);
       return;
@@ -176,9 +207,9 @@
   function comenca() {
     if (!prepara()) return;
     slot.appendChild(cv);
-    slot.classList.add('retrat-actiu');
+    slot.classList.add('retrat-inici', 'retrat-actiu');
     var hero = slot.closest ? slot.closest('.hero') : null;
-    if (hero) hero.classList.add('amb-retrat');
+    if (hero) setTimeout(function () { hero.classList.add('amb-retrat'); }, 900);
     slot.addEventListener('pointermove', juga);
     slot.addEventListener('pointerdown', juga);
     slot.addEventListener('pointerleave', function () { ratoli = null; });

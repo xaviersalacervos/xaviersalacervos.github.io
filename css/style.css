@@ -409,8 +409,9 @@ details li { margin-bottom: 0.35rem; font-size: 0.98rem; }
 .retrat-cel{position:absolute;pointer-events:none;z-index:2;transition:opacity .7s ease}
 .photo-slot.retrat-fet .retrat-cel{opacity:0}
 .cometes-cel{position:absolute;pointer-events:none;z-index:3}
-.hero.amb-retrat .hero-cel{display:none}
-@media (min-width:48rem){.hero.amb-retrat .photo-slot{margin-right:10rem}}
+.hero-cel{transition:opacity 1.6s ease}
+.hero.amb-retrat .hero-cel{opacity:0 !important}
+@media (min-width:48rem){.js .photo-slot{margin-right:10rem}}
 .ambit-estrella{position:absolute;z-index:3;width:0;height:0;pointer-events:none}
 .ambit-estrella i{position:absolute;left:-6px;top:-6px;width:12px;height:12px;border-radius:50%;background:var(--accent);transform:scale(0);box-shadow:0 0 0 0 rgba(164,71,31,.35);transition:transform .5s cubic-bezier(.3,1.6,.5,1)}
 .ambit-estrella b{font-family:var(--sans);position:absolute;left:14px;top:-.62rem;white-space:nowrap;font-size:.8rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);opacity:0;transform:translateX(-6px);transition:opacity .6s .15s,transform .6s .15s}
@@ -418,3 +419,4 @@ details li { margin-bottom: 0.35rem; font-size: 0.98rem; }
 .ambit-estrella.encesa b{opacity:1;transform:none}
 @keyframes ambitBatec{0%,100%{box-shadow:0 0 0 0 rgba(164,71,31,.35)}50%{box-shadow:0 0 0 7px rgba(164,71,31,0)}}
 @media (max-width:47.99rem){.ambit-estrella b{font-size:.72rem;letter-spacing:.04em}}
+.photo-slot.retrat-inici:not(.retrat-fet) img{transition:none}
