@@ -334,3 +334,21 @@ details li { margin-bottom: 0.35rem; font-size: 0.98rem; }
 .mapa-salt{font:inherit;font-size:.92rem;font-weight:600;padding:.25rem .7rem;margin:.15rem .2rem 0 0;border-radius:999px;border:1px solid #F3C9B4;background:transparent;color:#F3C9B4;cursor:pointer}
 .mapa-salt:hover{background:#F3C9B4;color:#13262E}
 @media print{.mapa{display:none}}
+
+/* Tast del mapa a la portada */
+.hero{position:relative;overflow:hidden}
+.hero .container{position:relative;z-index:1}
+.hero-cel{position:absolute;inset:0 0 0 auto;width:min(48%,40rem);pointer-events:none}
+.hero-cel svg{width:100%;height:100%;display:block}
+.tast-linies path{fill:none;stroke:var(--ink);stroke-opacity:.12;stroke-width:1}
+.tast-pols{fill:var(--ink);opacity:.3;animation:titil 4s ease-in-out infinite}
+.tast-halo{fill:var(--accent);opacity:.1;transform-box:fill-box;transform-origin:center}
+.tast-nucli{fill:var(--accent);opacity:.75}
+.tast-estrella .tast-halo{animation:tast-batec 4.2s ease-in-out infinite;animation-delay:inherit}
+@keyframes tast-batec{0%,100%{opacity:.08;transform:scale(.8)}35%{opacity:.28;transform:scale(1.25)}}
+@media (max-width:47.99rem){.hero-cel{inset:0 0 auto auto;width:100%;height:20rem;opacity:.8}}
+.mapa-tast{display:inline-flex;align-items:center;gap:.6rem;margin-top:1.5rem;padding:.55rem 1rem .55rem .8rem;border-radius:999px;border:1px solid var(--accent);background:var(--paper);color:var(--accent);font-weight:600;text-decoration:none}
+.mapa-tast:hover{background:var(--accent);color:#fff}
+.mapa-tast-punt{width:.7rem;height:.7rem;border-radius:50%;background:currentColor;box-shadow:0 0 0 4px rgba(164,71,31,.18);animation:titil 2.4s ease-in-out infinite}
+@media (prefers-reduced-motion:reduce){.tast-pols,.tast-estrella .tast-halo,.mapa-tast-punt{animation:none}}
+@media print{.hero-cel,.mapa-tast{display:none}}
