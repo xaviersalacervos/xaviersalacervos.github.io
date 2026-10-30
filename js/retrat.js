@@ -55,7 +55,7 @@
           x: 0, y: 0, vx: 0, vy: 0,
           c: 'rgb(' + dades[i] + ',' + dades[i + 1] + ',' + dades[i + 2] + ')',
           r: pas * (0.42 + Math.random() * 0.18),
-          ret: 1.4 + Math.random() * 1.4
+          ret: 0.5 + Math.random() * 1.4
         });
       }
     }
@@ -117,7 +117,7 @@
       ctx.fill();
     }
 
-    if (estat === 'forma' && temps > 5.6) {
+    if (estat === 'forma' && temps > 4.7) {
       estat = 'repos';
       slot.classList.remove('retrat-inici');
       slot.classList.add('retrat-fet');
@@ -210,7 +210,7 @@
     slot.appendChild(cv);
     slot.classList.add('retrat-inici', 'retrat-actiu');
     var hero = slot.closest ? slot.closest('.hero') : null;
-    if (hero) setTimeout(function () { hero.classList.add('amb-retrat'); }, 1400);
+    if (hero) setTimeout(function () { hero.classList.add('amb-retrat'); }, 500);
     slot.addEventListener('pointermove', juga);
     slot.addEventListener('pointerdown', juga);
     slot.addEventListener('pointerleave', function () { ratoli = null; });
