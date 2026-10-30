@@ -163,13 +163,13 @@
   function explica(id) {
     filtres.forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-id') === id ? 'true' : 'false'); });
     if (!id) {
-      info.innerHTML = '<p class="mapa-buit">Tria un servei o toca qualsevol estrella per veure com es connecta.</p>';
+      info.innerHTML = '<p class="mapa-buit">Tria un àmbit o toca qualsevol estrella per veure com es connecta.</p>';
       return;
     }
     var n = tots[id];
     if (n.tipus === 'srv') {
       var del = function (m) { return m.s.indexOf(id) > -1; };
-      info.innerHTML = '<p class="mapa-tipus">Servei</p><h3>' + esc(n.nom) + '</h3>' +
+      info.innerHTML = '<p class="mapa-tipus">Àmbit</p><h3>' + esc(n.nom) + '</h3>' +
         '<div class="mapa-cols"><div><h4>Surt de la trajectòria</h4>' + llista(TRAJECTORIA.filter(del)) + '</div>' +
         '<div><h4>I de la formació</h4>' + llista(FORMACIO.filter(del)) + '</div></div>';
     } else {

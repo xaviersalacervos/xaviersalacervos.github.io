@@ -44,7 +44,7 @@
   if (any) any.textContent = new Date().getFullYear();
 })();
 
-// Interruptor Sense IA / Amb IA de la secció Què ofereixo
+// Interruptor Sense IA / Amb IA de la secció Què aporto
 (function () {
   var sw = document.getElementById('vista-ia');
   var seccio = document.getElementById('expertesa');
