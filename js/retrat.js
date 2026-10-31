@@ -55,7 +55,7 @@
           x: 0, y: 0, vx: 0, vy: 0,
           c: 'rgb(' + dades[i] + ',' + dades[i + 1] + ',' + dades[i + 2] + ')',
           r: pas * (0.42 + Math.random() * 0.18),
-          ret: 0.3 + Math.random() * 0.6
+          ret: 0.2 + Math.random() * 0.45
         });
       }
     }
@@ -91,7 +91,7 @@
     for (var k = 0; k < punts.length; k++) {
       var p = punts[k];
       if (estat === 'forma') {
-        var t = Math.max(0, Math.min(1, (temps - p.ret) / 1.3));
+        var t = Math.max(0, Math.min(1, (temps - p.ret) / 1.05));
         var e = suau(t);
         p.x = p.sx + (p.tx - p.sx) * e;
         p.y = p.sy + (p.ty - p.sy) * e;
@@ -117,7 +117,7 @@
       ctx.fill();
     }
 
-    if (estat === 'forma' && temps > 2.2) {
+    if (estat === 'forma' && temps > 1.7) {
       estat = 'repos';
       slot.classList.remove('retrat-inici');
       slot.classList.add('retrat-fet');
