@@ -134,7 +134,7 @@
 
   // Un cop feta la cara, tres cometes surten cap a tres estrelles al costat de la foto,
   // una per àmbit, que s'encenen amb el seu nom.
-  var AMBITS = ['Formació', "Supervisió d'equips", 'Disseny de projectes'];
+  var AMBITS = ['Formació', "Supervisió d'equips", 'Disseny de projectes'], MAPA = ['F', 'S', 'P'];
   function cometes() {
     var W = S + 2 * M, r = S / 2, c = r + M, dist = r + Math.max(26, S * 0.15);
     var tela = document.createElement('canvas');
@@ -154,8 +154,8 @@
       var est = document.createElement('span');
       est.className = 'ambit-estrella';
       est.style.left = (tx - M) + 'px'; est.style.top = (ty - M) + 'px';
-      est.innerHTML = '<i></i><b>' + nom + '</b>';
-      est.setAttribute('aria-hidden', 'true');
+      est.innerHTML = '<i aria-hidden="true"></i><a href="#mapa" data-ambit-mapa="' + MAPA[i] + '">' + nom + '</a>';
+      est.addEventListener('pointermove', function (e) { e.stopPropagation(); });
       slot.appendChild(est);
       return { sx: sx, sy: sy, tx: tx, ty: ty,
         qx: c + Math.cos(ang - 0.35) * dist * 1.15, qy: c + Math.sin(ang - 0.35) * dist * 1.15,
@@ -189,6 +189,18 @@
     }
     requestAnimationFrame(vol);
   }
+
+  // Cada nom d'àmbit porta al mapa de trajectòria amb aquell àmbit seleccionat.
+  slot.addEventListener('click', function (e) {
+    var a = e.target.closest ? e.target.closest('a[data-ambit-mapa]') : null;
+    if (!a) return;
+    e.preventDefault();
+    var mapa = document.getElementById('mapa');
+    var f = document.querySelector('.mapa-filtre[data-id="' + a.getAttribute('data-ambit-mapa') + '"]');
+    if (mapa) mapa.scrollIntoView({ behavior: 'smooth' });
+    if (f && f.getAttribute('aria-pressed') !== 'true') f.click();
+    if (history.replaceState) history.replaceState(null, '', '#mapa');
+  });
 
   function posicio(e) {
     var b = cv.getBoundingClientRect();
