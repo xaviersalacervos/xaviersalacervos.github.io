@@ -411,17 +411,21 @@ details li { margin-bottom: 0.35rem; font-size: 0.98rem; }
 .cometes-cel{position:absolute;pointer-events:none;z-index:3}
 .hero-cel{transition:opacity 1.6s ease}
 .hero.amb-retrat .hero-cel{opacity:0 !important}
-@media (min-width:48rem){.js .photo-slot{margin-right:13.5rem;width:13rem;height:13rem}.ambit-estrella b{font-size:1rem;top:-.68rem}}
-@media (min-width:64rem) and (max-width:71.99rem){.ambit-estrella b{font-size:1.05rem}}
+@media (min-width:48rem){.js .photo-slot{margin-right:13.5rem;width:13rem;height:13rem}.ambit-estrella a{font-size:1rem;top:-.68rem}}
+@media (min-width:64rem) and (max-width:71.99rem){.ambit-estrella a{font-size:1.05rem}}
 @media (min-width:48rem) and (max-width:63.99rem){.hero .container{grid-template-columns:1fr;gap:2.5rem}.js .photo-slot{order:-1;margin-right:0}}
-@media (min-width:72rem){.js .photo-slot{margin-right:14rem;width:15rem;height:15rem}.ambit-estrella b{font-size:1.2rem;top:-.78rem}}
+@media (min-width:72rem){.js .photo-slot{margin-right:14rem;width:15rem;height:15rem}.ambit-estrella a{font-size:1.2rem;top:-.78rem}}
 .ambit-estrella{position:absolute;z-index:3;width:0;height:0;pointer-events:none}
 .ambit-estrella i{position:absolute;left:-6px;top:-6px;width:12px;height:12px;border-radius:50%;background:var(--accent);transform:scale(0);box-shadow:0 0 0 0 rgba(164,71,31,.35);transition:transform .5s cubic-bezier(.3,1.6,.5,1)}
-.ambit-estrella b{font-family:var(--serif);position:absolute;left:16px;top:-.78rem;white-space:nowrap;font-size:1.2rem;line-height:1.3;font-weight:600;color:var(--ink);opacity:0;transform:translateX(-6px);transition:opacity .6s .15s,transform .6s .15s}
+.ambit-estrella a{font-family:var(--serif);position:absolute;left:16px;top:-.78rem;white-space:nowrap;font-size:1.2rem;line-height:1.3;font-weight:600;color:var(--ink);opacity:0;transform:translateX(-6px);transition:opacity .6s .15s,transform .6s .15s}
 .ambit-estrella.encesa i{transform:scale(1);animation:ambitBatec 3.6s ease-in-out .6s infinite}
-.ambit-estrella.encesa b{opacity:1;transform:none}
+.ambit-estrella.encesa a{opacity:1;transform:none;pointer-events:auto}
+.ambit-estrella a{text-decoration:none;cursor:pointer}
+.ambit-estrella a::after{content:" →";color:var(--accent);opacity:0;transition:opacity .25s}
+.ambit-estrella a:hover,.ambit-estrella a:focus-visible{color:var(--accent);text-decoration:underline;text-underline-offset:.2em}
+.ambit-estrella a:hover::after,.ambit-estrella a:focus-visible::after{opacity:1}
 @keyframes ambitBatec{0%,100%{box-shadow:0 0 0 0 rgba(164,71,31,.35)}50%{box-shadow:0 0 0 7px rgba(164,71,31,0)}}
-@media (max-width:47.99rem){.ambit-estrella b{font-size:.98rem;top:-.66rem;left:13px}}
+@media (max-width:47.99rem){.ambit-estrella a{font-size:.98rem;top:-.66rem;left:13px}}
 .photo-slot.retrat-inici:not(.retrat-fet) img{transition:none}
 /* Els àmbits es mostren a les estrelles; la línia de sota el nom queda per a lectors de pantalla i per a qui té el moviment reduït */
 @media (prefers-reduced-motion:no-preference){.js .hero-title{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}}
