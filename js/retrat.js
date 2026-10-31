@@ -121,7 +121,7 @@
       estat = 'repos';
       slot.classList.remove('retrat-inici');
       slot.classList.add('retrat-fet');
-      setTimeout(cometes, 350);
+      setTimeout(cometes, 100);
       return;
     }
     if (estat === 'joc') {
@@ -159,9 +159,9 @@
       slot.appendChild(est);
       return { sx: sx, sy: sy, tx: tx, ty: ty,
         qx: c + Math.cos(ang - 0.35) * dist * 1.15, qy: c + Math.sin(ang - 0.35) * dist * 1.15,
-        ret: i * 0.25, est: est, arribat: false, cua: [] };
+        ret: i * 0.18, est: est, arribat: false, cua: [] };
     });
-    var t0 = performance.now(), DUR = 1.0;
+    var t0 = performance.now(), DUR = 0.8;
     function vol(ara) {
       var temps = (ara - t0) / 1000, viu = false;
       c2.clearRect(0, 0, W, W);
