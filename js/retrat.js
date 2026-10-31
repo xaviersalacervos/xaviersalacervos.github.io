@@ -55,7 +55,7 @@
           x: 0, y: 0, vx: 0, vy: 0,
           c: 'rgb(' + dades[i] + ',' + dades[i + 1] + ',' + dades[i + 2] + ')',
           r: pas * (0.42 + Math.random() * 0.18),
-          ret: 0.5 + Math.random() * 1.4
+          ret: 0.5 + Math.random() * 0.9
         });
       }
     }
@@ -91,7 +91,7 @@
     for (var k = 0; k < punts.length; k++) {
       var p = punts[k];
       if (estat === 'forma') {
-        var t = Math.max(0, Math.min(1, (temps - p.ret) / 2.6));
+        var t = Math.max(0, Math.min(1, (temps - p.ret) / 1.7));
         var e = suau(t);
         p.x = p.sx + (p.tx - p.sx) * e;
         p.y = p.sy + (p.ty - p.sy) * e;
@@ -117,11 +117,11 @@
       ctx.fill();
     }
 
-    if (estat === 'forma' && temps > 4.7) {
+    if (estat === 'forma' && temps > 3.2) {
       estat = 'repos';
       slot.classList.remove('retrat-inici');
       slot.classList.add('retrat-fet');
-      setTimeout(cometes, 700);
+      setTimeout(cometes, 350);
       return;
     }
     if (estat === 'joc') {
@@ -159,9 +159,9 @@
       slot.appendChild(est);
       return { sx: sx, sy: sy, tx: tx, ty: ty,
         qx: c + Math.cos(ang - 0.35) * dist * 1.15, qy: c + Math.sin(ang - 0.35) * dist * 1.15,
-        ret: i * 0.45, est: est, arribat: false, cua: [] };
+        ret: i * 0.25, est: est, arribat: false, cua: [] };
     });
-    var t0 = performance.now(), DUR = 1.5;
+    var t0 = performance.now(), DUR = 1.0;
     function vol(ara) {
       var temps = (ara - t0) / 1000, viu = false;
       c2.clearRect(0, 0, W, W);
