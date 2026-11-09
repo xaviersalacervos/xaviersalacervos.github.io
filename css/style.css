@@ -440,3 +440,11 @@ details li { margin-bottom: 0.35rem; font-size: 0.98rem; }
 /* «Assessorament d'equips» és més llarg: més marge a la dreta de la foto perquè no surti de pantalla */
 @media (min-width:64rem){.js .photo-slot{margin-right:16.5rem}}
 @media (min-width:72rem){.js .photo-slot{margin-right:17rem}}
+/* Botó «Pregunta'm» en mòbil: més petit i amagat mentre es veu la portada */
+.chat-fab{transition:opacity .3s ease,transform .3s ease,visibility .3s}
+@media (max-width:47.99rem){
+  .chat-fab{padding:.5rem .85rem .5rem .7rem;font-size:.88rem;gap:.5rem}
+  .chat-fab-dot{width:.6rem;height:.6rem}
+  .a-la-portada .chat-fab{opacity:0;visibility:hidden;transform:translateY(8px)}
+}
+@media (prefers-reduced-motion:reduce){.chat-fab{transition:none}}

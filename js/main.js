@@ -58,3 +58,12 @@
     b.addEventListener('click', function () { posa(b.getAttribute('data-vista') === 'ia'); });
   });
 })();
+
+// En mòbil, el botó «Pregunta'm» no tapa la portada: apareix quan es comença a baixar
+(function () {
+  var hero = document.getElementById('inici');
+  if (!hero || !('IntersectionObserver' in window)) return;
+  new IntersectionObserver(function (entries) {
+    document.documentElement.classList.toggle('a-la-portada', entries[0].intersectionRatio > 0.35);
+  }, { threshold: [0, 0.35, 1] }).observe(hero);
+})();
