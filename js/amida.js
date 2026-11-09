@@ -31,7 +31,7 @@ var PERFILS_A_MIDA = {
   },
   assessorament: {
     boto: "Assessorament d'equips",
-    lloc: "Assessor/a tècnic/a o supervisor/a d'equips",
+    lloc: "Assessor/a tècnic/a d'equips",
     mapa: 'S',
     fitxa: 'cv/fitxa-assessorament.pdf',
     resum: "Acompanyament a coordinadors i equips interdisciplinaris per ordenar la feina, prendre decisions i millorar l'atenció a les persones.",

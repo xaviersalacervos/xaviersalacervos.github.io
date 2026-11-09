@@ -429,3 +429,22 @@ details li { margin-bottom: 0.35rem; font-size: 0.98rem; }
 .photo-slot.retrat-inici:not(.retrat-fet) img{transition:none}
 /* Els àmbits es mostren a les estrelles; la línia de sota el nom queda per a lectors de pantalla i per a qui té el moviment reduït */
 @media (prefers-reduced-motion:no-preference){.js .hero-title{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}}
+
+/* IA dins de «Què aporto» */
+.ia-criteris{margin-top:2.5rem}
+.ia-criteris .criteria{margin-bottom:1rem}
+.ia-nota{color:var(--muted);font-size:.95rem;margin:0}
+/* Etiquetes dels àmbits a la portada en pantalles estretes */
+@media (max-width:26rem){.ambit-estrella a{font-size:.9rem}}
+@media (max-width:23.5rem){.ambit-estrella a{white-space:normal;width:7rem;line-height:1.15;top:-.55rem}.ambit-estrella a::after{content:none}}
+/* «Assessorament d'equips» és més llarg: més marge a la dreta de la foto perquè no surti de pantalla */
+@media (min-width:64rem){.js .photo-slot{margin-right:16.5rem}}
+@media (min-width:72rem){.js .photo-slot{margin-right:17rem}}
+/* Botó «Pregunta'm» en mòbil: més petit i amagat mentre es veu la portada */
+.chat-fab{transition:opacity .3s ease,transform .3s ease,visibility .3s}
+@media (max-width:47.99rem){
+  .chat-fab{padding:.5rem .85rem .5rem .7rem;font-size:.88rem;gap:.5rem}
+  .chat-fab-dot{width:.6rem;height:.6rem}
+  .a-la-portada .chat-fab{opacity:0;visibility:hidden;transform:translateY(8px)}
+}
+@media (prefers-reduced-motion:reduce){.chat-fab{transition:none}}
