@@ -134,7 +134,7 @@
 
   // Un cop feta la cara, tres cometes surten cap a tres estrelles al costat de la foto,
   // una per àmbit, que s'encenen amb el seu nom.
-  var AMBITS = ['Formació', "Supervisió d'equips", 'Disseny de projectes'], MAPA = ['F', 'S', 'P'];
+  var AMBITS = ['Formació', "Assessorament d'equips", 'Disseny de projectes'], MAPA = ['F', 'S', 'P'];
   function cometes() {
     var W = S + 2 * M, r = S / 2, c = r + M, dist = r + Math.max(26, S * 0.15);
     var tela = document.createElement('canvas');

@@ -8,7 +8,7 @@
 
   var SERVEIS = [
     { id: 'F', nom: 'Formació', linies: ['Formació'] },
-    { id: 'S', nom: "Supervisió d'equips", linies: ['Supervisió', "d'equips"] },
+    { id: 'S', nom: "Assessorament d'equips", linies: ['Assessorament', "d'equips"] },
     { id: 'P', nom: 'Disseny de projectes', linies: ['Disseny de', 'projectes'] }
   ];
 
