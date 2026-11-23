@@ -22,7 +22,7 @@
     },
     {
       q: 'Quina formació tens en intel·ligència artificial?',
-      a: "Des del 2025 he fet sis cursos d'IA aplicada a la feina (40 hores): ChatGPT per a la innovació i l'eficiència (Diputació de Girona), iniciació a la IA i als fluxos de treball amb IA (BIG School), IA aplicada a la gestió d'entitats (Plena Inclusión), IA per a la societat civil (Plena Inclusión i Founderz) i IA per a professionals de la psicologia (COPC).\n\nAra faig el curs Introducció a la intel·ligència artificial de PIMEC (25 h)."
+      a: "Des del 2025 he fet set cursos d'IA aplicada a la feina (65 hores): Introducció a la intel·ligència artificial (PIMEC, en línia, 25 h), ChatGPT per a la innovació i l'eficiència (Diputació de Girona), iniciació a la IA i als fluxos de treball amb IA (BIG School), IA aplicada a la gestió d'entitats (Plena Inclusión), IA per a la societat civil (Plena Inclusión i Founderz) i IA per a professionals de la psicologia (COPC)."
     },
     {
       q: 'Quina formació acadèmica tens?',
