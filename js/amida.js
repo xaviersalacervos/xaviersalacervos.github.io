@@ -67,12 +67,12 @@ var PERFILS_A_MIDA = {
     encaix: [
       'Disseny de projectes i programes ocupacionals i d’intervenció per a persones amb discapacitat intel·lectual.',
       "Estudis de necessitats: envelliment de persones amb discapacitat intel·lectual (2018) i senyalització universal d'equipaments municipals (2019).",
-      'Programa IEPA per a adolescents en risc social (Serveis Socials de Palafrugell, 2001).',
+      'Programa IEPA per a adolescents en risc social (Associació Il·lusions, Palafrugell, 2001).',
       'Treball en xarxa amb serveis socials, entitats i administracions del territori.'
     ],
     experiencia: [
       ['Director Tècnic i responsable de formació', 'Centre Ocupacional Tramuntana', '2008–2026'],
-      ['Disseny del programa IEPA', "Serveis Socials de l'Ajuntament de Palafrugell", '2001']
+      ['Disseny del programa IEPA', 'Associació Il·lusions, Palafrugell', '2001']
     ],
     formacio: [
       'Postgrau en Integració Laboral (UdG, 2012)',
