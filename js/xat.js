@@ -26,7 +26,7 @@
     },
     {
       q: 'Quina formació acadèmica tens?',
-      a: "Sóc llicenciat en Psicologia per la UAB (1992), amb el Postgrau en Integració Laboral (UdG, 200 h), el Postgrau en Patologia Dual (UdG, 190 h), el Màster en Mediació Terapèutica Corporal (Crei-Sants, UB) i el Postgrau en Psicoteràpia i Creixement Personal (Institut Erich Fromm).\n\nEstic habilitat com a psicòleg general sanitari i com a educador social."
+      a: "Sóc llicenciat en Psicologia per la UAB (1992), amb el Postgrau en Integració Laboral (UdG, 200 h), el Postgrau en Patologia Dual (UdG, 190 h), el Màster en Mediació Terapèutica Corporal (Crei-Sants, UB) i he fet cursos de Psicoteràpia i Creixement Personal (Institut Erich Fromm, 180 h).\n\nEstic habilitat com a psicòleg general sanitari i com a educador social."
     },
     {
       q: 'Com puc contactar amb tu?',

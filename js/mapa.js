@@ -32,7 +32,7 @@
     { id: 'f5', nom: 'Educador social habilitat', det: 'Habilitat el 2002', s: ['S'] },
     { id: 'f6', nom: "Lideratge i gestió d'equips", det: '10 cursos: PIMEC, Diputació de Girona, UdG, coaching, negociació i resolució de conflictes', s: ['S'] },
     { id: 'f7', nom: 'Postgrau en Patologia Dual', det: 'Universitat de Girona · 190 h · 2010–2011', s: ['S'] },
-    { id: 'f8', nom: 'Postgrau en Psicoteràpia', det: 'Institut Erich Fromm · 1993', s: ['S'] },
+    { id: 'f8', nom: 'Cursos de Psicoteràpia', det: 'Institut Erich Fromm, 180 h · 1993', s: ['S'] },
     { id: 'f9', nom: 'Postgrau en Integració Laboral', det: 'Universitat de Girona · 200 h · 2012', s: ['F', 'P'] },
     { id: 'f11', nom: 'Formació contínua especialitzada', det: '13 cursos: discapacitat i salut mental, inserció laboral, comunicació amb la ciutadania, prevenció i primers auxilis psicològics · 2008–2021', s: ['F', 'S', 'P'] },
     { id: 'f10', nom: 'Formació en IA', det: '7 cursos des del 2025: Diputació de Girona, COPC, Plena Inclusión, BIG School i PIMEC', s: ['F', 'S', 'P'], ia: true }
